@@ -25,4 +25,3 @@ primary_region = 'cdg'
 [[mounts]]
   source      = "n8n_data"
   destination = "/home/node/.n8n"
-
