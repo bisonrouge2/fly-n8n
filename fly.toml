@@ -8,7 +8,7 @@ primary_region = 'cdg'
 
 [build]
 
-[[http_service]
+[[http_service]]
   internal_port       = 5678
   force_https         = true
   auto_stop_machines  = "never"
