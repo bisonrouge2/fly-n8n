@@ -1,4 +1,3 @@
-# fly.toml
 app = "fly-n8n-z2g57w"
 primary_region = "cdg"
 
@@ -21,10 +20,15 @@ primary_region = "cdg"
 [env]
   # Fuseau horaire
   GENERIC_TIMEZONE = "Europe/Paris"
-  # Auth basique (optionnel, mais fortement recommandé)
+  # Auth basique
   N8N_BASIC_AUTH_ACTIVE   = "true"
-  N8N_BASIC_AUTH_USER = "bisonrouge"
+  N8N_BASIC_AUTH_USER     = "bisonrouge"
   N8N_BASIC_AUTH_PASSWORD = "mdp-n8n-12à98è12@K"
+  # Ports et hôte
+  N8N_PORT = "5678"
+  N8N_HOST = "0.0.0.0"
+  # Activer les task runners
+  N8N_RUNNERS_ENABLED = "true"
   # Compaction SQLite au démarrage
   DB_SQLITE_VACUUM_ON_STARTUP = "true"
 
