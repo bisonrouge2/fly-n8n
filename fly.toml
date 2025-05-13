@@ -1,28 +1,33 @@
-# fly.toml app configuration file generated for fly-n8n-z2g57w on 2025-05-12T11:37:10Z
-#
-# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
-#
-
-app = 'fly-n8n-z2g57w'
-primary_region = 'cdg'
+# fly.toml
+app = "fly-n8n-z2g57w"
+primary_region = "cdg"
 
 [build]
 
 [http_service]
-internal_port       = 5678
-force_https         = true
-auto_stop_machines  = "never"
-auto_start_machines = true
-min_machines_running = 1
-processes           = ["app"]
-
+  internal_port       = 5678
+  force_https         = true
+  auto_stop_machines  = "never"
+  auto_start_machines = true
+  min_machines_running = 1
+  processes           = ["app"]
 
 [[vm]]
-  memory = '1gb'
-  cpu_kind = 'shared'
-  cpus = 1
+  cpu_kind = "shared"
+  cpus     = 1
+  memory   = "1gb"
   memory_mb = 1024
-  
-[env]
-  N8N_PORT = "8080"
 
+[env]
+  # Fuseau horaire
+  GENERIC_TIMEZONE = "Europe/Paris"
+  # Auth basique (optionnel, mais fortement recommandé)
+  N8N_BASIC_AUTH_ACTIVE   = "true"
+  N8N_BASIC_AUTH_USER = "bisonrouge"
+  N8N_BASIC_AUTH_PASSWORD = "mdp-n8n-12à98è12@K"
+  # Compaction SQLite au démarrage
+  DB_SQLITE_VACUUM_ON_STARTUP = "true"
+
+[[mounts]]
+  source      = "n8n_vol"
+  destination = "/home/node/.n8n"
