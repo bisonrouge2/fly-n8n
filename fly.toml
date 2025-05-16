@@ -31,6 +31,3 @@ primary_region = "cdg"
   # Compaction SQLite au démarrage
   DB_SQLITE_VACUUM_ON_STARTUP = "true"
 
-[[mounts]]
-  source      = "n8n_vol"
-  destination = "/home/node/.n8n"
