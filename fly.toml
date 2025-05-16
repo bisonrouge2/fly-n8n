@@ -8,7 +8,7 @@ primary_region = "cdg"
   GENERIC_TIMEZONE            = "Europe/Paris"
   N8N_BASIC_AUTH_ACTIVE       = "true"
   N8N_BASIC_AUTH_USER         = "bisonrouge"
-  N8N_BASIC_AUTH_PASSWORD     = "mdp-n8n-12à98è12@K"
+  # Supprime N8N_BASIC_AUTH_PASSWORD d’ici, il doit être en secret fly.io
   N8N_PORT                   = "5678"
   N8N_HOST                   = "0.0.0.0"
   N8N_RUNNERS_ENABLED         = "true"
