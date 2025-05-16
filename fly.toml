@@ -2,7 +2,7 @@ app = "fly-n8n-z2g57w"
 primary_region = "cdg"
 
 [deploy]
-  release_command = ""
+  image = "n8nio/n8n:latest"
 
 [env]
   GENERIC_TIMEZONE            = "Europe/Paris"
