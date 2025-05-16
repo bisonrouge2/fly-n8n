@@ -14,10 +14,6 @@ primary_region = "cdg"
   N8N_RUNNERS_ENABLED         = "true"
   DB_SQLITE_VACUUM_ON_STARTUP = "true"
 
-[[mounts]]
-  source      = "n8n_vol"
-  destination = "/home/node/.n8n"
-
 [[services]]
   internal_port = 5678
   protocol = "tcp"
@@ -35,3 +31,7 @@ primary_region = "cdg"
     timeout = 2000
     grace_period = "10s"
     restart_limit = 0
+
+[[services.mounts]]
+  source      = "n8n_vol"
+  destination = "/home/node/.n8n"
