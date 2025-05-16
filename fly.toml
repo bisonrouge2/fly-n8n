@@ -5,14 +5,18 @@ primary_region = "cdg"
   release_command = ""
 
 [env]
-  GENERIC_TIMEZONE = "Europe/Paris"
-  N8N_BASIC_AUTH_ACTIVE = "true"
-  N8N_BASIC_AUTH_USER = "bisonrouge"
-  N8N_BASIC_AUTH_PASSWORD = "mdp-n8n-12à98è12@K"
-  N8N_PORT = "5678"
-  N8N_HOST = "0.0.0.0"
-  N8N_RUNNERS_ENABLED = "true"
+  GENERIC_TIMEZONE            = "Europe/Paris"
+  N8N_BASIC_AUTH_ACTIVE       = "true"
+  N8N_BASIC_AUTH_USER         = "bisonrouge"
+  N8N_BASIC_AUTH_PASSWORD     = "mdp-n8n-12à98è12@K"
+  N8N_PORT                   = "5678"
+  N8N_HOST                   = "0.0.0.0"
+  N8N_RUNNERS_ENABLED         = "true"
   DB_SQLITE_VACUUM_ON_STARTUP = "true"
+
+[[mounts]]
+  source      = "n8n_vol"
+  destination = "/home/node/.n8n"
 
 [[services]]
   internal_port = 5678
@@ -20,10 +24,11 @@ primary_region = "cdg"
 
   [[services.ports]]
     port = 80
+    handlers = ["http"]
 
   [[services.ports]]
     port = 443
-    handlers = ["tls"]
+    handlers = ["tls", "http"]
 
   [[services.tcp_checks]]
     interval = 10000
