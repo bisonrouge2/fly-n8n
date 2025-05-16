@@ -24,13 +24,12 @@ primary_region = "cdg"
   N8N_PORT                    = "5678"
   N8N_HOST                    = "0.0.0.0"
   N8N_RUNNERS_ENABLED         = "true"
-  # Désactivation SQLite pour utiliser uniquement Postgres
-  # DB_SQLITE_VACUUM_ON_STARTUP = "true"
+  DB_SQLITE_VACUUM_ON_STARTUP = "true"
 
-  DB_TYPE                    = postgresdb
-  DB_POSTGRESDB_HOST         = db.uywaeaynlyciznbuszuz.supabase.co
-  DB_POSTGRESDB_PORT         = 5432
-  DB_POSTGRESDB_DATABASE     = postgres
-  DB_POSTGRESDB_USER         = postgres
-  DB_POSTGRESDB_PASSWORD     = project-database-n8n-1
-  DB_POSTGRESDB_SSLMODE      = require
+  DB_TYPE                    = "postgresdb"
+  DB_POSTGRESDB_HOST         = "db.uywaeaynlyciznbuszuz.supabase.co"
+  DB_POSTGRESDB_PORT         = "5432"
+  DB_POSTGRESDB_DATABASE     = "postgres"
+  DB_POSTGRESDB_USER         = "postgres"
+  DB_POSTGRESDB_PASSWORD     = "project-database-n8n-1"
+  DB_POSTGRESDB_SSLMODE      = "require"
